@@ -10,6 +10,12 @@ svg{
     font-size: 20px;
 }
 
+#contact svg{
+    font-size: 30px;
+}
+
+
+
 form{
     display: flex;
     flex-direction: column;
@@ -17,16 +23,19 @@ form{
 }
 
 input, textarea{
-    width: 70vw;
+    width: 100%;
     border: transparent;
-    border-radius: 4px;
-    padding: 5px;
-}
-
-input{
-    height: 30px;
+    border-bottom: 2px solid var(--color-primary);
+    padding: 10px;
+    background: transparent;
+    color: var(--color-white);
+    height: 45px;
+    margin-bottom: 20px;
 }
 
 textarea{
-    height: 70px;
+    border: 2px solid var(--color-primary);
+    border-radius: 4px;
+    height: 100px;
+    margin-bottom: 10px;
 }

@@ -10,7 +10,7 @@ return (
 <div className='container header__container'>
 <h5>Hello I'm</h5>
 <h1>ENOW MYKE-AUSTINE ETA</h1>
-<h5 className='text-light'>Software Engineer </h5>
+<h5 className='text-light'>Software Engineer & UI/UX Designer</h5>
 <CTA/>
 <HeaderSocial/>
 <div className='my_image'>

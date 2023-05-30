@@ -3,6 +3,7 @@ import './contact.css'
 import {MdOutlineEmail} from 'react-icons/md'
 import {AiOutlineLinkedin} from 'react-icons/ai'
 import {BsWhatsapp} from 'react-icons/bs'
+import {BsEnvelope} from 'react-icons/bs'
 import {useRef} from 'react'
 import emailjs from '../component/emailjs-com'
 const Contact = () => {
@@ -51,7 +52,7 @@ target='_blank'>Whatsapp me</a>
 <input type="email" name='email' placeholder='your email' required/>
 <textarea name="message" id="message" cols="30" rows="10"
 placeholder='your message' required></textarea>
-<button type="submit" className='btn btn-primary'>send message</button>
+<button type="submit" className='btn btn-primary'>Message Me</button>
 </form>
 </div>
 </section>

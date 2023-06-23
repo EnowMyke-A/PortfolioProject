@@ -2,12 +2,12 @@ import React from 'react'
 import { BsLinkedin } from 'react-icons/bs';
 import {FaGithub} from 'react-icons/fa'
 import {FaFacebookF} from 'react-icons/fa'
-import { CgTwitter } from "react-icons/cg";
+import { FaTwitter } from "react-icons/fa";
 
 import './footer.css'
 const Footer = () => {
     return (
-      <div className="footer__container">
+      <div className="footer__container" id='footer'>
         <a href="#" className="footer__logo">
           Enow Myke-Austine
         </a>
@@ -47,7 +47,7 @@ const Footer = () => {
             <FaFacebookF />
           </a>
           <a href="https://twitter.com" target="blank">
-            <CgTwitter />
+            <FaTwitter />
           </a>
         </div>
 

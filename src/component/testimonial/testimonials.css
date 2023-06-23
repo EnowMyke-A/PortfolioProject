@@ -8,16 +8,18 @@
     overflow: hidden;
     border-radius: 50%;
     margin: 0 auto 1rem;
-    border: .4rem solid var(--color-primary-variant);
+    border: .4rem solid var(--color-primary);
 }
 
 .testimonial{
-    background: var(--color-bg-variant);
+    background: rgb(40, 40, 40);
     text-align: center;
     padding: 2rem;
     border-radius: 2rem;
     user-select: none;
     padding-bottom: 6rem;
+    border: 1px solid rgb(22, 185, 255);
+    width: 300px;
 }
 
 .testimonial img{
@@ -26,9 +28,10 @@
     height: 100%;
 }
 
-h5{
+.testimonial h5{
     font-size: 20px;
     font-weight: 800;
+    color: rgb(22, 185, 255);
 }
 
 .swiper-pagination{
@@ -36,8 +39,8 @@ h5{
 }
 
 .client__review{
-    color: var(--color-light);
-    font-weight: 300;
+    color: var(--color-white);
+    font-weight: 500;
     width: 80%;
     margin: 0.8rem auto 0;
     display: block;
@@ -46,7 +49,6 @@ h5{
 
 .swiper-pagination-clickable .swiper-pagination-bullet{
     background: var(--color-primary);
-
 }
 
 @media only screen and (max-width: 600px) {

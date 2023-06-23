@@ -7,7 +7,9 @@ export const Experience = () => {
     <section id="experience">
       <h5>What skills i have</h5>
       <h2>My Experience</h2>
-      <div className="container experience__container">
+      <div className="container small_text">Below is a graphical map✍🏽 of both my development and designing skills🧠✅ alongside
+      the experience duration I have in them</div>
+      <div className="container">
         <ListExperiences />
       </div>
     </section>

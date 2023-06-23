@@ -7,13 +7,13 @@
 
 .portfolio__item{
     background: var(--color-bg);
-    border: 2px solid var(--color-primary-variant);
     padding:.7rem;
     border-radius: 1rem;
     transition: var(--transition);
     margin: auto;
     height: 19rem;
     min-width: 300px;
+    font-size: .8rem;
 }
 
 .portfolio__item:hover{
@@ -22,10 +22,11 @@
 
 #portfolio img{
     margin-top: 0px;
+    width: 100%;
 }
 
 .portfolio__item__image{
-    border-radius: 1rem;
+    border-radius: .2rem;
     overflow: hidden;
     height: 60%;
 }
@@ -39,7 +40,7 @@
     align-items: center;
     margin-bottom:1rem;
     gap: 1rem;
-    justify-content:center;
+    margin-top: -10px;
 }
 
 @media screen and (max-width:1024px) {

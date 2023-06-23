@@ -4,7 +4,8 @@ import {AiOutlineHome} from 'react-icons/ai'
 import {AiOutlineUser} from 'react-icons/ai'
 import {BiBook} from 'react-icons/bi'
 import {RiServiceLine} from 'react-icons/ri'
-import { BiMessageSquareDetail} from 'react-icons/bi'
+import {BiMessageSquareDetail} from 'react-icons/bi'
+import {IoIosArrowDown} from 'react-icons/io'
 import { useState } from 'react'
 
  
@@ -17,6 +18,7 @@ const Navbar = () => {
             <a href='#experience' onClick={()=>setActiveNav('#experience')} className={activeNav==='#experience'? 'active' : ''}><BiBook/></a>
             <a href='#services' onClick={()=>setActiveNav('#service')} className={activeNav==='#service'? 'active' : ''}><RiServiceLine/></a>
             <a href='#contact' onClick={()=>setActiveNav('#contact')} className={activeNav==='#contact'? 'active' : ''}><BiMessageSquareDetail/></a>
+            <a href='#footer'><IoIosArrowDown/></a>
         </nav>
     )
 }

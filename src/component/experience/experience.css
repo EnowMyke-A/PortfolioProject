@@ -5,17 +5,11 @@
 }
 
 .experience__container>div{
-    background:var(--color-bg-variant);
+    background:var(--color-primary);
     padding: 2.4rem 5rem;
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
-}
-
-.experience__container>div:hover{
-    background: transparent;
-    border-color: var(--color-primary-variant);
-    cursor: default;
 }
 
 .experience__container > div h3{
@@ -48,6 +42,34 @@
 .experience_description{
     text-align: center;
 }
+
+.small_text{
+    text-align: center;
+}
+
+.experience__container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    background: var(--color-bg);
+    backdrop-filter: blur(15px);
+    padding: 30px 30px;
+    border-radius: 50%;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after{
+    color: white;
+    font-size: 15px;
+  }
+  
+  .swiper-button-next:hover,  
+  .swiper-button-prev:hover {
+    color: black;
+  }
 
 @media only screen and (max-width: 1024px) {    
     .experience__container{
@@ -94,3 +116,23 @@
 
 }
 } 
+
+hr{
+    background:var(--color-gradient);
+    height:2px;
+    width:30%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+h4{
+    text-align: center;
+    font-size: 20px;
+    padding: 8px;
+    padding-top: 25px;
+    
+}
+
+:root{
+    --swiper-navigation-size: 15px;
+}

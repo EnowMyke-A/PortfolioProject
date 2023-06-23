@@ -22,28 +22,28 @@ export const Testimonial = () => {
     {
       id: 1,
       testimonial:
-        "Enow Myke you are indeed a tough knuckles. I must say impressed with the work you did on my mobile phone ecommerce site",
+        "Enow Myke you are indeed a tough knuckles. I must say I'm impressed🤗🙂 with the work you did on my mobile phone ecommerce site",
       avatar: IMG,
       Cname: "Alexa Fox",
     },
     {
       id: 2,
       testimonial:
-        "Man I practically can't thank you enough for building the FETOS. I'm quite amazed with how fast and sleek you did it",
+        "Man I practically can't thank you enough👌✔ for building the FETOS. I'm quite amazed with how fast and sleek you did it",
       avatar: AV1,
-      Cname: "John Key",
+      Cname: "John Rondel",
     },
     {
       id: 3,
       testimonial:
-        "The chat app you created is really amazing. I mean you are truely one of a kind. I Hope we can do more work in the futur",
+        "The chat app you created is really amazing👏🏽🙌🏽. I mean you are truely one of a kind. I Hope we can do more work in the future",
       avatar: AV2,
       Cname: "Alexander McKeys",
     },
     {
       id: 4,
       testimonial:
-        "I Like the work you've done here. It's very impressive. How about I make you work on another for a better pay?",
+        "I Like the work you've done here. It's very impressive. How about I make you work on another for a better pay?👍🏽",
       avatar: AV3,
       Cname: "Roy Xavier",
     },
@@ -72,6 +72,7 @@ export const Testimonial = () => {
       spaceBetween={40}
       slidesPerView={1}
       pagination={{ clickable: true }}
+      navigation
       >
         {testimonials.map((testi) => {
           return (

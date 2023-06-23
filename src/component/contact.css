@@ -6,6 +6,17 @@
     text-align: center;
 }
 
+.contact__options article{
+    width: 25%;
+    border-radius: 8px;
+    background: rgb(40, 40, 40);
+    padding: 15px;
+}
+
+.contact__options h5{
+    font-size: 1rem;
+}
+
 svg{
     font-size: 20px;
 }

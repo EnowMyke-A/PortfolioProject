@@ -1,0 +1,29 @@
+.Language__block{
+    border-radius: 5px;
+    background: rgb(40, 40, 40);
+    width: 220px;
+    padding: 10px 0px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.Language__block span{
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.Lang__Name{
+   padding-top: 8px;
+   background: var(--color-gradient);
+   -webkit-background-clip: text;
+    color: transparent;
+}
+
+.Duration{
+  font-weight: 900;
+  font-size: 16px;
+  color: var(--color-light);
+  margin-top: -20px;
+}

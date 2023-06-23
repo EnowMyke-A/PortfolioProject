@@ -28,7 +28,7 @@ return (
 <article className='contact__option'>
 <MdOutlineEmail className='contact__option__icon'/>
 <h4>Email</h4>
-<h5>enowmyke944@gmail.com</h5>
+<h5>Message</h5>
 <a href='mailto:enowmyke944@gmail.com' target='_blank'>send a
 message</a>
 </article>

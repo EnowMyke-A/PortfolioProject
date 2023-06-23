@@ -10,10 +10,12 @@ list-style: none;
 text-decoration: none;
 }
 :root{
---color-bg:#0b0b1d;
+--color-bg:#000000;
 --color-bg-variant:#2c2c6c;
 --color-primary:#4db5ff;
 --color-primary-variant:rgba(77, 181, 255, 0.4);
+--color-icon: rgb(80, 255, 207);
+--color-gradient: linear-gradient(96.9deg, rgb(80, 255, 207) 10.5%, rgb(22, 185, 255) 74.4%);
 --color-white:#fff;
 --color-light:rgba(255,255,255, 0.6);
 --container-width-lg:75%; /*size of the container we are going to use on different*/
@@ -42,7 +44,19 @@ font-weight: 500;
 }
 h1{
 font-size: 2.5rem;
+background: var(--color-gradient);
+-webkit-background-clip: text;
+color: transparent;
 }
+
+h2{
+ font-size: 1.5rem;
+}
+
+h5{
+    font-size: 20px;
+}
+
 section{
 margin-top: 8rem;
 }
@@ -52,27 +66,36 @@ text-align: center;
 color: var(--color-light);
 }
 section > h2{
-color: var(--color-primary);
 margin-bottom: 3rem;
+background: var(--color-gradient);
+-webkit-background-clip: text;
+color: transparent;
 }
 .text-light{
 color: var(--color-light);
 }
 a{
-color: var(--color-primary);
-transition: var(--transition);
+    background: var(--color-gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: var(--transition);
 }
+
+.icon{
+    color: var(--color-icon) ;
+}
+
 a:hover{
 color: var(--color-white);
 }
 .btn{
 width: max-content;
 display: inline-block;
-color: var(--color-primary);
+color: var(--color-icon);
 padding: .75rem 1.2rem;
-border-radius: .4rem;
 cursor: pointer;
-border: 1px solid var(--color-primary);
+border: 1px solid;
+border-image: var(--color-gradient) 1;
 transition: var(--transition);
 line-height: 20px;
 }
@@ -82,13 +105,16 @@ color: var(--color-bg);
 border-color: transparent;
 }
 .btn-primary{
-background: var(--color-primary);
+background: var(--color-gradient);
 color: var(--color-bg);
+border-radius: .4rem;
+border: none;
 }
 img{
 display: block;
-width: 100%;
-margin-top: -80px;
+width: 125%;
+margin-top: -15rem;
+margin-left: -25px;
 }
 @media screen and (max-width:1024px) {
 .container{

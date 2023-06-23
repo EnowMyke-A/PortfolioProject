@@ -1,38 +1,56 @@
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
-import {BiCheck} from 'react-icons/bi'
+import React, { useState, useEffect } from 'react';
+import {IoIosApps, IoIosPhonePortrait} from 'react-icons/io'
+import {GiArtificialIntelligence} from 'react-icons/gi'
+import {FaGlobe} from 'react-icons/fa'
+import {MdSchool} from 'react-icons/md'
+import { FaBriefcase } from 'react-icons/fa';
+import {BiCog} from 'react-icons/bi'
+import {BiServer} from 'react-icons/bi'
 
-const ListServices = () => {
-    const [data, setData] = useState([])
 
-    useEffect(() =>{
-        getServices()
-    }, [])
+function getIconComponent(str) {
+  const iconMapping = {
+    'IoIosApps': IoIosApps,
+    'GiArtificialIntelligence': GiArtificialIntelligence,
+    'IoIosPhonePortrait': IoIosPhonePortrait,
+    'FaGlobe': FaGlobe,
+    'MdSchool': MdSchool,
+    'ImHammer2': FaBriefcase,
+    'BiCogs': BiCog,
+    'BiServer': BiServer
+  }
+  const IconComponent = iconMapping[str];
+  return IconComponent ? <IconComponent style={{fontSize: 70}} className='service_icon'/> : null;
+}
 
-    const getServices = async () => {
-        const response = await axios.get('http://localhost:5000/api/service/services')
-        setData(response.data.services)
-    }
-    console.log(data)
-    return data.map((d)=>{
-        return(
 
-        <article className='service' key={d._id}>
-          <div className="service__head">
-            <h3>{d.title}</h3>
-          </div>
-          <ul className='service__list'>
-            <li>
-              <BiCheck className='service__list__icon'/> 
-              <p> {d.description} </p>
-            </li>
-          </ul>
-        </article>
+function ListServices() {
+  const [data, setData] = useState([]);
 
-       )
-    })
+  useEffect(() => {
+    fetch('http://localhost:5000/api/services')
+      .then(response => response.json())
+      .then(data => setData(data))
+      .catch(error => console.error(error));
+  }, []);
+    
 
-    ;
+
+  return (
+    <div className='conatiner'>
+      <ul className='service__container conatiner'>
+        {data.map(item => (
+          <li key={item.id} className='service_block'>
+            <div className='ServiceIcon'>
+            {getIconComponent(item.Icon)}
+            </div>
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default ListServices;

@@ -7,7 +7,7 @@ const ListPortfolio = () => {
     }, []);
 
     const getPortfolio = async() =>{
-        const response = await axios.get("/api/project/projects");
+        const response = await axios.get("http://localhost:5000/api/projects");
         setData(response.data.project)
     }
     console.log(data)

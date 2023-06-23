@@ -15,7 +15,7 @@
 }
 
 .about__me:hover{
-    background-color: var(--color-bg-variant);
+    background-color: var(--color-primary);
 }
 
 .about__me__image{
@@ -44,24 +44,29 @@
 }
 
 .about__card{
-    background: var(--color-bg-variant);
+    background: var(--color-primary);
     border: 1px solid transparent;
     padding: 1rem 0;
     text-align: center;
     border-radius: 5px;
     width: 9rem;
+    color: black;
     transition: var(--transition);
 }
 
 .about__card:hover{
     background: transparent;
+    color: var(--color-light);
     border-color: var(--color-primary-variant);
     cursor: default;
 }
 
+.about__card:hover .about__icon{
+    color: var(--color-light);
+}
 
 .about__icon{
-    color: var(--color-primary);
+    color: black;
     font-size: 1.4rem;
     margin-bottom: 1rem;
 }

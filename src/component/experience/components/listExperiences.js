@@ -1,40 +1,61 @@
-import React, { useState, useEffect } from "react";
-import { BsPatchCheckFill } from "react-icons/bs";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import ProgressRing from '../../CyclicBar/Bar';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination} from "swiper";
+import "swiper/css/navigation";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import '../experience.css';
 
-const ListExperiences = () => {
+function ListExperience() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getExperiences();
+    fetch('http://localhost:5000/api/experience')
+      .then(response => response.json())
+      .then(data => setData(data))
+      .catch(error => console.error(error));
   }, []);
 
-  const getExperiences = async () => {
-    const response = await axios.get(
-      "http://localhost:5000/api/experience/experiences"
-    );
-    setData(response.data.experience);
-  };
-  return data.map((d) => {
-    return (
-      <div key={d._id} className="experience__backend">
-        <h3>{d.title}</h3>
-        <h4 className="experience_description">{d.description}</h4>
-        <div className="experience__content">
-          {d.skills.map((s) => {
-            return (
-              <article key={s._id} className="experience__details">
-                <BsPatchCheckFill className="experience__details__icon" />
-                <div className="title__level">
-                  <h4>{s.name}</h4>
-                <small className="text-light">{s.level}</small>
-                </div>
-              </article>
-            );
-          })}
+  
+
+  const chunks = [];
+  let chunk = [];
+
+  data.forEach((d, i) => {
+  chunk.push(d);
+  if ((i + 1) % 3 === 0) {
+    chunks.push(chunk);
+    chunk = [];    
+  }
+})
+
+  return (
+    <div>
+      <h4>Programming & Design Skills</h4><hr/>
+      <div className='experience__container'>
+       <Swiper
+       modules={[Navigation, Pagination]}
+       navigation={true}
+       spaceBetween={50}
+       centeredSlides={true}
+       pagination={{ clickable: true }} >
+      {chunks.map((chunk, i) => (
+      <SwiperSlide key={i}>
+        <div className='experience__container' key={i}>
+        {chunk.map(item => (
+          <li key={item.id}>
+            <ProgressRing value={item.value} icon={item.icon} Language={item.language} experience={item.years}/>
+          </li>
+        ))} 
         </div>
+      </SwiperSlide>
+      ))}
+      </Swiper>
       </div>
-    );
-  });
-};
-export default ListExperiences;
+        
+    </div>
+  );
+}
+
+export default ListExperience;

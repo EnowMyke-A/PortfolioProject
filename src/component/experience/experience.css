@@ -117,7 +117,7 @@
 }
 } 
 
-hr{
+.experience_port hr{
     background:var(--color-gradient);
     height:2px;
     width:30%;

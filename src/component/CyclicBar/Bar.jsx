@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaHtml5, FaCss3, FaJava, FaReact, FaPython,FaDatabase, FaJsSquare} from 'react-icons/fa';
-import { SiC, SiCplusplus, SiAdobephotoshop, SiFigma } from 'react-icons/si';
+import { SiC, SiCplusplus, SiAdobephotoshop, SiFigma, SiCanva } from 'react-icons/si';
 import './Bar.css'
 
 function getIconComponent(str,radius) {
@@ -15,7 +15,8 @@ function getIconComponent(str,radius) {
     'SiCplusplus': SiCplusplus,
     'SiAdobephotoshop': SiAdobephotoshop,
     'SiFigma': SiFigma,
-    'FaDatabase': FaDatabase
+    'FaDatabase': FaDatabase,
+    'CgCanva': SiCanva
   }
   const IconComponent = iconMapping[str];
   return IconComponent ? <IconComponent x={radius-2} y={radius+15} style={{fontSize: 25, color: '#cccccc'}}/> : null;

@@ -37,13 +37,13 @@ const Footer = () => {
         </ul>
 
         <div className="footer__media">
-          <a href="https://linkedin.com" target="blank">
+          <a href="https://www.linkedin.com/in/enow-myke-3299b2241/" target="blank">
             <BsLinkedin />
           </a>
-          <a href="https://github.com" target="blank">
+          <a href="https://github.com/EnowMyke-A/" target="blank">
             <FaGithub />
           </a>
-          <a href="https://facebook.com" target="blank">
+          <a href="https://www.facebook.com/enow.austine.1/" target="blank">
             <FaFacebookF />
           </a>
           <a href="https://twitter.com" target="blank">

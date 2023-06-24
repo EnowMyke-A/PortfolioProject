@@ -66,7 +66,7 @@ text-align: center;
 color: var(--color-light);
 }
 section > h2{
-margin-bottom: 3rem;
+margin-bottom: 1rem;
 background: var(--color-gradient);
 -webkit-background-clip: text;
 color: transparent;
@@ -131,5 +131,17 @@ width: var(--container-width-sm);
 section > h2{
 margin-bottom: 2rem;
 }
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet{
+    background-color: var(--color-bg);
+}
+
+hr{
+    width: 50%;
+    background-color: var(--color-light);
+    height: 3px;
+    margin: auto;
+    margin-bottom: 3rem;
 }
 

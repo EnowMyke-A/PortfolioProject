@@ -31,7 +31,7 @@ function ListExperience() {
 })
 
   return (
-    <div>
+    <div  className="experience_port">
       <h4>Programming & Design Skills</h4><hr/>
       <div className='experience__container'>
        <Swiper

@@ -12,7 +12,7 @@ const About = () => {
     return (
       <section id="about">
         <h5>Get to know</h5>
-        <h2>About me</h2>
+        <h2>About me</h2><hr />
         <div className="container about__container" data-aos="zoom-in" data-aos-duration="1500">
           <div className="about__me">
             <div className="about__me__image">
